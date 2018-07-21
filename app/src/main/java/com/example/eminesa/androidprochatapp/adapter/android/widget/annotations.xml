@@ -1,0 +1,5 @@
+<root>
+    <item name='android.widget.Toolbar void setTitle(java.lang.CharSequence)'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.eminesa.androidprochatapp"
+        minSdkVersion 23 // Quickblox resim değiştirmwk için minimum SDK 23 olmalıdır.
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0-beta5'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //Flataction Button Library
+    implementation 'com.android.support:design:27.1.1'
+
+    //add Library
+    implementation 'com.github.lguipeng:BubbleView:1.0.1'
+
+    //Add pro chat app library (for Login and Sign Up)
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.quickblox:quickblox-android-sdk-core:3.3.0'
+    implementation 'com.quickblox:quickblox-android-sdk-chat:3.3.0'
+
+    //For message library
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    //quickblox da resim çekmek için kullanılan kütüphanler
+    implementation 'com.quickblox:quickblox-android-sdk-content:3.3.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    // For typing listener library
+    implementation 'com.github.bhargavms:DotLoader:1.0.3'
+
+}
